@@ -1,0 +1,20 @@
+use ai
+use std.io
+
+pub async fn main() {
+    // Simple AI Chat
+    let response = await ai.chat("What is ErikrafT?")
+    io.print(response)
+
+    // AI Image Generation
+    let imageUrl = await ai.image("A futuristic city")
+    io.print("Generated image at: " + imageUrl)
+
+    // AI Agent
+    let agent = ai.agent("Research Assistant", {
+        model: "erik-pro-1",
+        capabilities: ["web_search", "code_gen"]
+    })
+
+    await agent.do("Find the latest news about AI")
+}

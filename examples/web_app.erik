@@ -1,0 +1,21 @@
+use web.components
+
+component App {
+    let count = 0
+
+    render {
+        <div class="main">
+            <h1>ErikrafT Web</h1>
+            <p>Count is: {count}</p>
+            <button onclick={() => count++}>Increment</button>
+            <Counter initial={10} />
+        </div>
+    }
+}
+
+component Counter(initial: int) {
+    let value = initial
+    render {
+        <div>Sub-counter: {value}</div>
+    }
+}
