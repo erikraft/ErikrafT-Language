@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Integration | ErikrafT Docs</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo"><div class="logo-icon"></div> ErikrafT</a><a href="index.html" class="nav-link active">Docs</a></div></nav></div></header>
+    <div class="container"><div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-nav-group">
+                <h4 class="docs-nav-title">Features</h4>
+                <a href="ai.html" class="docs-nav-link active">AI Integration</a>
+                <a href="automation.html" class="docs-nav-link">Hardware & Automation</a>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">AI Integration</h1>
+            <p>ErikrafT treats AI as a first-class citizen with built-in primitives for LLM communication and agent management.</p>
+
+            <h2>AI Chat</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        <span class="keyword">let</span> response = <span class="keyword">await</span> ai.<span class="function">chat</span>(<span class="string">"What is the capital of France?"</span>)
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: var(--space-8);">Autonomous Agents</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        <span class="keyword">let</span> agent = ai.<span class="function">agent</span>(<span class="string">"Coder"</span>, {<br>
+                        &nbsp;&nbsp;capabilities: [<span class="string">"code_gen"</span>, <span class="string">"terminal"</span>]<br>
+                        })<br>
+                        <span class="keyword">await</span> agent.<span class="function">do</span>(<span class="string">"Fix the bug in main.erik"</span>)
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div></div>
+</body>
+</html>

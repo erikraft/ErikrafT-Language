@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started | ErikrafT Docs</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav">
+                <div class="header-left">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-icon"></div>
+                        ErikrafT
+                    </a>
+                    <a href="index.html" class="nav-link active">Docs</a>
+                    <a href="../playground/index.html" class="nav-link">Playground</a>
+                    <a href="../examples/index.html" class="nav-link">Examples</a>
+                    <a href="../packages/index.html" class="nav-link">Packages</a>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <span>Search docs...</span>
+                    </div>
+                    <a href="../download/index.html" class="btn btn-secondary">Download</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="docs-layout">
+            <aside class="docs-sidebar">
+                <div class="docs-nav-group">
+                    <h4 class="docs-nav-title">Getting Started</h4>
+                    <a href="getting-started.html" class="docs-nav-link active">Overview</a>
+                    <a href="installation.html" class="docs-nav-link">Installation</a>
+                    <a href="language-basics.html" class="docs-nav-link">Language Basics</a>
+                </div>
+                <div class="docs-nav-group">
+                    <h4 class="docs-nav-title">Platforms</h4>
+                    <a href="web.html" class="docs-nav-link">Web Development</a>
+                    <a href="desktop.html" class="docs-nav-link">Desktop Apps</a>
+                </div>
+                <div class="docs-nav-group">
+                    <h4 class="docs-nav-title">Features</h4>
+                    <a href="ai.html" class="docs-nav-link">AI Integration</a>
+                    <a href="automation.html" class="docs-nav-link">Hardware & Automation</a>
+                </div>
+            </aside>
+
+            <main class="docs-content">
+                <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">Overview</h1>
+                <p style="font-size: 1.125rem; color: var(--text-muted); margin-bottom: var(--space-8);">
+                    Welcome to the ErikrafT documentation. ErikrafT is a multi-target language designed for AI-native applications.
+                </p>
+
+                <h2 id="what-is-erikraft">What is ErikrafT?</h2>
+                <p>ErikrafT (erik) is designed for the modern era where AI, Web, and Native performance intersect. It aims to be as expressive as TypeScript, as safe as Rust, and as productive as Go.</p>
+
+                <h2 id="core-features">Core Features</h2>
+                <ul>
+                    <li><strong>AI Natives</strong>: Built-in primitives for LLM interaction and agent orchestration.</li>
+                    <li><strong>Multi-target</strong>: Compile to LLVM, WebAssembly/JS, or Bytecode.</li>
+                    <li><strong>Safety</strong>: Memory safety without a complex borrow checker, and manifest-based hardware permissions.</li>
+                </ul>
+
+                <h2 id="hello-world">Your First Program</h2>
+                <div class="editor-container" style="margin-bottom: var(--space-8);">
+                    <div class="editor-content">
+                        <div class="code-content">
+                            <span class="keyword">pub fn</span> <span class="function">main</span>() {<br>
+                            &nbsp;&nbsp;print(<span class="string">"Hello, ErikrafT!"</span>)<br>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: var(--space-12); display: flex; justify-content: space-between;">
+                    <span></span>
+                    <a href="installation.html" style="color: var(--primary);">Next: Installation →</a>
+                </div>
+            </main>
+
+            <aside class="docs-toc">
+                <h4 class="docs-nav-title">On this page</h4>
+                <a href="#what-is-erikraft" class="docs-nav-link">What is ErikrafT?</a>
+                <a href="#core-features" class="docs-nav-link">Core Features</a>
+                <a href="#hello-world" class="docs-nav-link">Your First Program</a>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>

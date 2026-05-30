@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Basics | ErikrafT Docs</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo"><div class="logo-icon"></div> ErikrafT</a><a href="index.html" class="nav-link active">Docs</a></div></nav></div></header>
+    <div class="container"><div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-nav-group">
+                <h4 class="docs-nav-title">Getting Started</h4>
+                <a href="getting-started.html" class="docs-nav-link">Overview</a>
+                <a href="installation.html" class="docs-nav-link">Installation</a>
+                <a href="language-basics.html" class="docs-nav-link active">Language Basics</a>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">Language Basics</h1>
+
+            <h2>Variables</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        <span class="keyword">let</span> x = <span class="string">10</span> <span class="comment">// Inferred as int</span><br>
+                        <span class="keyword">const</span> PI = <span class="string">3.14</span> <span class="comment">// Constant</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Functions</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        <span class="keyword">fn</span> <span class="function">add</span>(a: int, b: int) -> int {<br>
+                        &nbsp;&nbsp;<span class="keyword">return</span> a + b<br>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <h2>Data Types</h2>
+            <ul>
+                <li><strong>Primitives</strong>: int, float, string, bool, char</li>
+                <li><strong>Collections</strong>: List&lt;T&gt;, Map&lt;K, V&gt;</li>
+                <li><strong>Null Safety</strong>: Use <code>?</code> for nullable types (e.g., <code>string?</code>).</li>
+            </ul>
+        </main>
+    </div></div>
+</body>
+</html>

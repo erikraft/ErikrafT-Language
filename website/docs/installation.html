@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation | ErikrafT Docs</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Simplified header and sidebar structure for brevity in population -->
+    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo"><div class="logo-icon"></div> ErikrafT</a><a href="index.html" class="nav-link active">Docs</a></div></nav></div></header>
+    <div class="container"><div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-nav-group">
+                <h4 class="docs-nav-title">Getting Started</h4>
+                <a href="getting-started.html" class="docs-nav-link">Overview</a>
+                <a href="installation.html" class="docs-nav-link active">Installation</a>
+                <a href="language-basics.html" class="docs-nav-link">Language Basics</a>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">Installation</h1>
+            <p style="color: var(--text-muted); margin-bottom: var(--space-8);">ErikrafT is currently in Alpha. Installation is via the CLI tool.</p>
+
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>Python 3.8+ (for the prototype CLI)</li>
+                <li>LLVM 15+ (for native compilation)</li>
+            </ul>
+
+            <h2>Install using cURL</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        curl -fsSL https://erikraft.dev/install.sh | sh
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: var(--space-8);">Manual Installation</h2>
+            <p>Clone the repository and add the <code>cli/</code> directory to your PATH.</p>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        git clone https://github.com/erikraft/erik.git<br>
+                        export PATH="$PATH:$(pwd)/erik/cli"
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div></div>
+</body>
+</html>

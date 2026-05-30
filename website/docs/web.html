@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development | ErikrafT Docs</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo"><div class="logo-icon"></div> ErikrafT</a><a href="index.html" class="nav-link active">Docs</a></div></nav></div></header>
+    <div class="container"><div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-nav-group">
+                <h4 class="docs-nav-title">Platforms</h4>
+                <a href="web.html" class="docs-nav-link active">Web Development</a>
+                <a href="desktop.html" class="docs-nav-link">Desktop Apps</a>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">Web Development</h1>
+            <p>ErikrafT features a built-in component model that compiles directly to optimized JavaScript and HTML.</p>
+
+            <h2>Components</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        <span class="keyword">component</span> <span class="function">HelloWorld</span>(name: string) {<br>
+                        &nbsp;&nbsp;<span class="keyword">render</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Hello {name}!&lt;/div&gt;<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: var(--space-8);">State Management</h2>
+            <p>State in ErikrafT components is reactive by default. Simply declare a variable within the component scope.</p>
+        </main>
+    </div></div>
+</body>
+</html>
