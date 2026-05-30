@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hardware & Automation | ErikrafT Docs</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo"><div class="logo-icon"></div> ErikrafT</a><a href="index.html" class="nav-link active">Docs</a></div></nav></div></header>
+    <div class="container"><div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-nav-group">
+                <h4 class="docs-nav-title">Features</h4>
+                <a href="ai.html" class="docs-nav-link">AI Integration</a>
+                <a href="automation.html" class="docs-nav-link active">Hardware & Automation</a>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">Hardware & Automation</h1>
+            <p>Access physical hardware directly with ErikrafT's manifest-based security model.</p>
+
+            <h2>GPIO Access</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        <span class="keyword">use</span> hw.gpio<br><br>
+                        <span class="keyword">fn</span> <span class="function">blink</span>() {<br>
+                        &nbsp;&nbsp;gpio.<span class="function">pin</span>(<span class="string">13</span>).<span class="function">toggle</span>()<br>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: var(--space-8);">Manifest Permissions</h2>
+            <p>To access hardware, you must declare it in your <code>erik.toml</code>:</p>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        [permissions]<br>
+                        hardware.gpio = ["pin.13"]
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div></div>
+</body>
+</html>

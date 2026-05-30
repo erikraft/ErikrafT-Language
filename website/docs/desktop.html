@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desktop Apps | ErikrafT Docs</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo"><div class="logo-icon"></div> ErikrafT</a><a href="index.html" class="nav-link active">Docs</a></div></nav></div></header>
+    <div class="container"><div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="docs-nav-group">
+                <h4 class="docs-nav-title">Platforms</h4>
+                <a href="web.html" class="docs-nav-link">Web Development</a>
+                <a href="desktop.html" class="docs-nav-link active">Desktop Apps</a>
+            </div>
+        </aside>
+        <main class="docs-content">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">Desktop Apps</h1>
+            <p>Build native desktop applications for Windows, macOS, and Linux using the <code>use desktop</code> module.</p>
+
+            <h2>Native Window</h2>
+            <div class="editor-container">
+                <div class="editor-content" style="min-height: auto;">
+                    <div class="code-content">
+                        <span class="keyword">use</span> desktop<br><br>
+                        <span class="keyword">component</span> <span class="function">MainWin</span> {<br>
+                        &nbsp;&nbsp;<span class="keyword">render</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Window title=<span class="string">"ErikrafT Desktop"</span> width={800} height={600}&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to Native ErikrafT&lt;/h1&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/Window&gt;<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div></div>
+</body>
+</html>
