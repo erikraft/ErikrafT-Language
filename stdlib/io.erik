@@ -1,0 +1,11 @@
+// stdlib/io.erik
+pub fn print(value: any) {
+    // Native binding to system print
+}
+
+// stdlib/net.erik
+pub class Http {
+    pub async fn get(url: string) -> HttpResponse {
+        // implementation
+    }
+}

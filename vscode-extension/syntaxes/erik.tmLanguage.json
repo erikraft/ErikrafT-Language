@@ -1,0 +1,37 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "ErikrafT",
+    "patterns": [
+        { "include": "#keywords" },
+        { "include": "#strings" },
+        { "include": "#numbers" },
+        { "include": "#comments" }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.erik",
+                "match": "\\b(let|const|fn|pub|use|return|if|else|match|ai|component|render|async|await|spawn|type|struct|class|interface|trait|enum|try|catch|throw)\\b"
+            }]
+        },
+        "numbers": {
+            "patterns": [{
+                "name": "constant.numeric.erik",
+                "match": "\\b\\d+(\\.\\d*)?\\b"
+            }]
+        },
+        "comments": {
+            "patterns": [{
+                "name": "comment.line.double-slash.erik",
+                "match": "//.*"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.erik",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{ "name": "constant.character.escape.erik", "match": "\\\\." }]
+        }
+    },
+    "scopeName": "source.erik"
+}

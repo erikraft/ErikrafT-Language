@@ -1,0 +1,24 @@
+use desktop
+use web.components
+
+component MainWin {
+    render {
+        <Window title="ErikrafT Desktop" width={800} height={600}>
+            <MenuBar>
+                <Menu label="File">
+                    <MenuItem label="Quit" action={() => desktop.quit()} />
+                </Menu>
+            </MenuBar>
+            <view>
+                <h1>Welcome to Desktop App</h1>
+                <button onclick={() => desktop.notify("Hello", "Native notification!")}>
+                    Notify Me
+                </button>
+            </view>
+        </Window>
+    }
+}
+
+pub fn main() {
+    desktop.run(MainWin)
+}

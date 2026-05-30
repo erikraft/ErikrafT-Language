@@ -1,0 +1,25 @@
+{
+    "name": "erik-vscode",
+    "displayName": "ErikrafT Support",
+    "description": "VS Code support for the ErikrafT language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "erik",
+            "aliases": ["ErikrafT", "erik"],
+            "extensions": [".erik"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "erik",
+            "scopeName": "source.erik",
+            "path": "./syntaxes/erik.tmLanguage.json"
+        }]
+    }
+}
