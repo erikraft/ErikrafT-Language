@@ -1,25 +1,83 @@
 {
     "name": "erik-vscode",
-    "displayName": "ErikrafT Support",
-    "description": "VS Code support for the ErikrafT language",
-    "version": "0.0.1",
+    "displayName": "ErikrafT Language Support",
+    "description": "Professional support for the ErikrafT language (.erik)",
+    "version": "0.1.0-alpha",
+    "publisher": "erikraft",
     "engines": {
-        "vscode": "^1.60.0"
+        "vscode": "^1.75.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Linters",
+        "Formatters",
+        "Debuggers"
     ],
+    "keywords": [
+        "erik",
+        "ErikrafT",
+        "AI",
+        "Web"
+    ],
+    "activationEvents": [
+        "onLanguage:erik"
+    ],
+    "main": "./client/out/extension",
     "contributes": {
-        "languages": [{
-            "id": "erik",
-            "aliases": ["ErikrafT", "erik"],
-            "extensions": [".erik"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "erik",
-            "scopeName": "source.erik",
-            "path": "./syntaxes/erik.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "erik",
+                "aliases": [
+                    "ErikrafT",
+                    "erik"
+                ],
+                "extensions": [
+                    ".erik"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "erik",
+                "scopeName": "source.erik",
+                "path": "./syntaxes/erik.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "erik",
+                "path": "./snippets/snippets.json"
+            }
+        ],
+        "debuggers": [
+            {
+                "type": "erik",
+                "label": "ErikrafT Debug",
+                "languages": [
+                    "erik"
+                ]
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -b",
+        "watch": "tsc -b -w",
+        "postinstall": "cd client && npm install && cd ../server && npm install"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^16.18.34",
+        "@types/vscode": "^1.75.0",
+        "typescript": "^5.1.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/erikraft/ErikrafT-Language"
+    },
+    "homepage": "https://lang.erikraft.com",
+    "bugs": {
+        "url": "https://github.com/erikraft/ErikrafT-Language/issues"
     }
 }

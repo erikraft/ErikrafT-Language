@@ -1,0 +1,14 @@
+{
+    "name": "erik-lsp-client",
+    "description": "LSP client for ErikrafT",
+    "version": "0.1.0",
+    "main": "out/extension.js",
+    "dependencies": {
+        "vscode-languageclient": "^8.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.18.34",
+        "@types/vscode": "^1.75.0",
+        "typescript": "^5.1.3"
+    }
+}
