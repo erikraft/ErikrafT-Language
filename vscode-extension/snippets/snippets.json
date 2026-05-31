@@ -1,0 +1,74 @@
+{
+    "Function": {
+        "prefix": "func",
+        "body": [
+            "fn ${1:name}(${2:params}) -> ${3:type} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Define a function"
+    },
+    "Class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:Example} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Define a class"
+    },
+    "App": {
+        "prefix": "app",
+        "body": [
+            "app ${1:Home} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Define an app component"
+    },
+    "If": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "If statement"
+    },
+    "ForEach": {
+        "prefix": "foreach",
+        "body": [
+            "foreach ${1:item} in ${2:items} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "ForEach loop"
+    },
+    "Main": {
+        "prefix": "main",
+        "body": [
+            "pub fn main() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Main function"
+    },
+    "AI Chat": {
+        "prefix": "aichat",
+        "body": [
+            "let ${1:response} = ai.chat(\"${2:prompt}\")"
+        ],
+        "description": "AI Chat primitive"
+    },
+    "Component": {
+        "prefix": "comp",
+        "body": [
+            "component ${1:Name}(${2:props}) {",
+            "\trender {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ],
+        "description": "Define a component"
+    }
+}
