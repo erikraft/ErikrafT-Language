@@ -3,22 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ErikrafT is a high-performance programming language designed for the AI era, featuring first-class AI primitives and native performance.">
     <title>Playground | ErikrafT</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body>
-    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo">ErikrafT Language (.erik)</a><a href="../docs/index.html" class="nav-link">Docs</a><a href="index.html" class="nav-link active">Playground</a></div><div class="header-right"><div class="btn btn-primary">Share</div></div></nav></div></header>
+<body style="height: 100vh; display: flex; flex-direction: column;">
 
-    <main style="height: calc(100vh - 64px); display: flex; flex-direction: column;">
-        <div class="playground-grid" style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden;">
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav" aria-label="Main navigation">
+                <div class="header-left">
+                    <a href="../index.html" class="logo">ErikrafT Language (.erik)</a>
+                    <div class="nav-links">
+                        <a href="../docs/index.html" class="nav-link ">Docs</a>
+                        <a href="../playground/index.html" class="nav-link active">Playground</a>
+                        <a href="../examples/index.html" class="nav-link ">Examples</a>
+                        <a href="../packages/index.html" class="nav-link ">Packages</a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar" id="search-trigger" aria-label="Search documentation">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search docs...</span>
+                        <span style="margin-left: auto; opacity: 0.5;">⌘K</span>
+                    </div>
+                    <a href="../download/index.html" class="btn btn-secondary">Download</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="btn btn-ghost" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <button type="button" class="mobile-menu-toggle" id="mobile-menu-open" aria-label="Open mobile menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <span class="logo">ErikrafT</span>
+            <button type="button" class="mobile-nav-close" id="mobile-menu-close" aria-label="Close mobile menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="../index.html" class="mobile-nav-link">Home</a>
+            <a href="../docs/index.html" class="mobile-nav-link">Docs</a>
+            <a href="../playground/index.html" class="mobile-nav-link">Playground</a>
+            <a href="../examples/index.html" class="mobile-nav-link">Examples</a>
+            <a href="../packages/index.html" class="mobile-nav-link">Packages</a>
+            <a href="../download/index.html" class="mobile-nav-link">Download</a>
+            <a href="https://github.com/erikraft/ErikrafT-Language" class="mobile-nav-link" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+
+    <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
+        <div class="playground-layout" style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden;">
             <div class="editor-container" style="margin: 0; border: none; border-right: 1px solid var(--border); border-radius: 0;">
                 <div class="editor-header">
-                    <div class="editor-tabs"><div class="editor-tab active">playground.erik</div></div>
-                    <div class="btn btn-ghost" style="color: var(--primary);">Run</div>
+                    <div class="editor-controls">
+                        <div class="control control-close"></div>
+                        <div class="control control-minimize"></div>
+                        <div class="control control-maximize"></div>
+                    </div>
+                    <div class="editor-tabs">
+                        <div class="editor-tab active">playground.erik</div>
+                    </div>
+                    <button class="btn btn-ghost" style="color: var(--primary);">Run</button>
                 </div>
-                <div class="editor-content" style="height: 100%;">
-                    <textarea spellcheck="false" style="width: 100%; height: 100%; background: transparent; border: none; color: #e2e8f0; font-family: var(--font-mono); font-size: 0.875rem; resize: none; outline: none; line-height: 1.6;">
+                <div class="editor-content" style="flex: 1;">
+                    <textarea id="playground-textarea" spellcheck="false" style="width: 100%; height: 100%; background: transparent; border: none; color: #e2e8f0; font-family: var(--font-mono); font-size: 0.875rem; resize: none; outline: none; line-height: 1.6;">
 pub fn main() {
     let message = "Welcome to the ErikrafT Playground!"
     print(message)
@@ -33,9 +90,9 @@ pub fn main() {
             <div style="background: var(--bg); display: flex; flex-direction: column;">
                 <div class="editor-header" style="background: rgba(255,255,255,0.01);">
                     <div class="editor-tabs"><div class="editor-tab active">Console</div></div>
-                    <div class="btn btn-ghost">Clear</div>
+                    <button class="btn btn-ghost" id="clear-console">Clear</button>
                 </div>
-                <div style="padding: var(--space-4); font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted);">
+                <div id="playground-console" style="padding: var(--space-4); font-family: var(--font-mono); font-size: 0.875rem; color: var(--text-muted); overflow-y: auto; flex: 1;">
                     <div style="color: var(--accent);">$ erik run playground.erik</div>
                     <div style="color: #fff;">Welcome to the ErikrafT Playground!</div>
                     <div style="color: var(--text-muted); opacity: 0.5; margin-top: var(--space-4);">Program exited with code 0</div>
@@ -43,5 +100,33 @@ pub fn main() {
             </div>
         </div>
     </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const runBtn = document.querySelector('.editor-header .btn-ghost');
+            const clearBtn = document.getElementById('clear-console');
+            const consoleEl = document.getElementById('playground-console');
+            const textarea = document.getElementById('playground-textarea');
+
+            if (runBtn) {
+                runBtn.addEventListener('click', () => {
+                    const code = textarea.value;
+                    const output = document.createElement('div');
+                    output.innerHTML = `<div style="color: var(--accent); margin-top: var(--space-4);">$ erik run playground.erik</div>` +
+                                     `<div style="color: #fff;">Running...</div>` +
+                                     `<div style="color: var(--text-muted); opacity: 0.5;">[Process completed with exit code 0]</div>`;
+                    consoleEl.appendChild(output);
+                    consoleEl.scrollTop = consoleEl.scrollHeight;
+                });
+            }
+
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    consoleEl.innerHTML = '<div style="color: var(--text-muted); opacity: 0.5;">Console cleared.</div>';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

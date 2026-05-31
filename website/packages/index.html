@@ -2,40 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ErikrafT is a high-performance programming language designed for the AI era, featuring first-class AI primitives and native performance.">
     <title>Packages | ErikrafT</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo">ErikrafT Language (.erik)</a><a href="../docs/index.html" class="nav-link">Docs</a></div><div class="header-right"><div class="search-bar">Search packages...</div></div></nav></div></header>
+
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav" aria-label="Main navigation">
+                <div class="header-left">
+                    <a href="../index.html" class="logo">ErikrafT Language (.erik)</a>
+                    <div class="nav-links">
+                        <a href="../docs/index.html" class="nav-link ">Docs</a>
+                        <a href="../playground/index.html" class="nav-link ">Playground</a>
+                        <a href="../examples/index.html" class="nav-link ">Examples</a>
+                        <a href="../packages/index.html" class="nav-link active">Packages</a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar" id="search-trigger" aria-label="Search documentation">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search packages...</span>
+                        <span style="margin-left: auto; opacity: 0.5;">/</span>
+                    </div>
+                    <a href="../download/index.html" class="btn btn-secondary">Download</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="btn btn-ghost" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <button type="button" class="mobile-menu-toggle" id="mobile-menu-open" aria-label="Open mobile menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <span class="logo">ErikrafT</span>
+            <button type="button" class="mobile-nav-close" id="mobile-menu-close" aria-label="Close mobile menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="../index.html" class="mobile-nav-link">Home</a>
+            <a href="../docs/index.html" class="mobile-nav-link">Docs</a>
+            <a href="../playground/index.html" class="mobile-nav-link">Playground</a>
+            <a href="../examples/index.html" class="mobile-nav-link">Examples</a>
+            <a href="../packages/index.html" class="mobile-nav-link">Packages</a>
+            <a href="../download/index.html" class="mobile-nav-link">Download</a>
+            <a href="https://github.com/erikraft/ErikrafT-Language" class="mobile-nav-link" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
     <main class="container section">
-        <h1 style="margin-bottom: var(--space-8);">ErikrafT Package Registry</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-12);">
+            <div>
+                <h1 style="font-size: 2.5rem; margin-bottom: var(--space-2);">Package Registry</h1>
+                <p style="color: var(--text-muted);">Explore and install libraries from the ErikrafT community.</p>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-size: 1.5rem; font-weight: 700;">142</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Total Packages</div>
+            </div>
+        </div>
+
         <div class="grid">
             <div class="card">
-                <div style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: var(--primary);">http</h3>
-                    <span style="color: var(--text-muted); font-size: 0.75rem;">v1.2.0</span>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                    <div>
+                        <h3 class="card-title" style="color: var(--primary); margin-bottom: 0;">http</h3>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">v1.2.0 • 2 days ago</span>
+                    </div>
+                    <div style="font-size: 0.75rem; background: rgba(0, 229, 255, 0.1); color: var(--primary); padding: 2px 8px; border-radius: var(--radius-full);">Official</div>
                 </div>
-                <p class="card-text">Standard HTTP client and server library.</p>
-
+                <p class="card-text" style="margin-bottom: var(--space-6);">Standard HTTP client and server library with async support.</p>
+                <div style="display: flex; gap: var(--space-4); font-size: 0.8125rem; color: var(--text-muted);">
+                    <span><i class="fa-solid fa-download"></i> 12.5k</span>
+                    <span><i class="fa-solid fa-star"></i> 450</span>
+                </div>
             </div>
-            <div class="card">
-                <div style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: var(--primary);">json</h3>
-                    <span style="color: var(--text-muted); font-size: 0.75rem;">v0.9.5</span>
-                </div>
-                <p class="card-text">High-performance JSON serialization.</p>
 
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                    <div>
+                        <h3 class="card-title" style="color: var(--primary); margin-bottom: 0;">json</h3>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">v0.9.5 • 1 week ago</span>
+                    </div>
+                    <div style="font-size: 0.75rem; background: rgba(0, 229, 255, 0.1); color: var(--primary); padding: 2px 8px; border-radius: var(--radius-full);">Official</div>
+                </div>
+                <p class="card-text" style="margin-bottom: var(--space-6);">High-performance JSON serialization and deserialization.</p>
+                <div style="display: flex; gap: var(--space-4); font-size: 0.8125rem; color: var(--text-muted);">
+                    <span><i class="fa-solid fa-download"></i> 8.2k</span>
+                    <span><i class="fa-solid fa-star"></i> 320</span>
+                </div>
             </div>
-            <div class="card">
-                <div style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: var(--primary);">ai-utils</h3>
-                    <span style="color: var(--text-muted); font-size: 0.75rem;">v1.0.1</span>
-                </div>
-                <p class="card-text">Helper functions for building complex AI agents.</p>
 
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                    <div>
+                        <h3 class="card-title" style="color: var(--primary); margin-bottom: 0;">ai-utils</h3>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">v1.0.1 • 3 days ago</span>
+                    </div>
+                </div>
+                <p class="card-text" style="margin-bottom: var(--space-6);">Helper functions for building complex AI agents and tool-use.</p>
+                <div style="display: flex; gap: var(--space-4); font-size: 0.8125rem; color: var(--text-muted);">
+                    <span><i class="fa-solid fa-download"></i> 3.1k</span>
+                    <span><i class="fa-solid fa-star"></i> 180</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                    <div>
+                        <h3 class="card-title" style="color: var(--primary); margin-bottom: 0;">sql-driver</h3>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">v0.4.2 • 1 month ago</span>
+                    </div>
+                </div>
+                <p class="card-text" style="margin-bottom: var(--space-6);">Database drivers for PostgreSQL, MySQL, and SQLite.</p>
+                <div style="display: flex; gap: var(--space-4); font-size: 0.8125rem; color: var(--text-muted);">
+                    <span><i class="fa-solid fa-download"></i> 1.5k</span>
+                    <span><i class="fa-solid fa-star"></i> 95</span>
+                </div>
             </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom: var(--space-4);">
+                        ErikrafT Language
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: var(--space-4);">
+                        The programming language designed for the era of AI, Web, and Native performance.
+                    </p>
+                    <div style="font-size: 0.875rem; color: var(--text-muted);">
+                        <div><strong>Website:</strong> <a href="https://lang.erikraft.com" style="color: var(--primary);">lang.erikraft.com</a></div>
+                        <div><strong>GitHub:</strong> <a href="https://github.com/erikraft/ErikrafT-Language" style="color: var(--primary);">ErikrafT-Language</a></div>
+                        <div><strong>Extension:</strong> .erik</div>
+                        <div><strong>Command:</strong> erik</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Resources</h4>
+                    <a href="../docs/index.html" class="footer-link">Documentation</a>
+                    <a href="../examples/index.html" class="footer-link">Examples</a>
+                    <a href="../playground/index.html" class="footer-link">Playground</a>
+                    <a href="../packages/index.html" class="footer-link">Packages</a>
+                </div>
+                <div>
+                    <h4 class="footer-title">Ecosystem</h4>
+                    <a href="../community/index.html" class="footer-link">Community</a>
+                    <a href="../blog/index.html" class="footer-link">Blog</a>
+                    <a href="../roadmap/index.html" class="footer-link">Roadmap</a>
+                    <a href="../changelog/index.html" class="footer-link">Changelog</a>
+                </div>
+                <div>
+                    <h4 class="footer-title">Project</h4>
+                    <a href="../about/index.html" class="footer-link">About</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="footer-link">GitHub</a>
+                    <a href="https://twitter.com/erikraft" class="footer-link">Twitter</a>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-12); border-top: 1px solid var(--border); padding-top: var(--space-8); color: var(--text-muted); font-size: 0.75rem; text-align: center;">
+                © 2024 ErikrafT Foundation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
