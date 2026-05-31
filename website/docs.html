@@ -2,15 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Documentation | ErikrafT</title>
-    <style>body { font-family: sans-serif; padding: 2rem; max-width: 800px; margin: 0 auto; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | ErikrafT Language</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <h1>ErikrafT Documentation</h1>
-    <p>Welcome to the official ErikrafT documentation.</p>
-    <ul>
-        <li><a href="getting_started.html">Getting Started</a></li>
-        <li><a href="language_spec.html">Language Specification</a></li>
-    </ul>
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav">
+                <div class="header-left">
+                    <a href="index.html" class="logo">ErikrafT Language (.erik)</a>
+                    <a href="docs/index.html" class="nav-link active">Docs</a>
+                    <a href="playground/index.html" class="nav-link">Playground</a>
+                    <a href="examples/index.html" class="nav-link">Examples</a>
+                    <a href="packages/index.html" class="nav-link">Packages</a>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <span>Search docs...</span>
+                        <span style="margin-left: auto; opacity: 0.5;">⌘K</span>
+                    </div>
+                    <a href="download/index.html" class="btn btn-secondary">Download</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="btn btn-ghost">GitHub</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container section">
+        <h1>ErikrafT Documentation</h1>
+        <p>Everything you need to build high-performance, AI-powered applications.</p>
+        <div class="grid" style="margin-top: var(--space-8);">
+            <a href="docs/getting-started.html" class="card">
+                <h3 class="card-title">Getting Started</h3>
+                <p class="card-text">Learn the fundamentals of ErikrafT Language.</p>
+            </a>
+            <a href="docs/index.html" class="card">
+                <h3 class="card-title">Full Documentation</h3>
+                <p class="card-text">Explore all features and platforms.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom: var(--space-4);">
+                        ErikrafT Language
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: var(--space-4);">
+                        The programming language designed for the era of AI, Web, and Native performance.
+                    </p>
+                    <div style="font-size: 0.875rem; color: var(--text-muted);">
+                        <div><strong>Website:</strong> <a href="https://lang.erikraft.com" style="color: var(--primary);">lang.erikraft.com</a></div>
+                        <div><strong>GitHub:</strong> <a href="https://github.com/erikraft/ErikrafT-Language" style="color: var(--primary);">ErikrafT-Language</a></div>
+                        <div><strong>Extension:</strong> .erik</div>
+                        <div><strong>Command:</strong> erik</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Resources</h4>
+                    <a href="docs/index.html" class="footer-link">Documentation</a>
+                    <a href="examples/index.html" class="footer-link">Examples</a>
+                    <a href="playground/index.html" class="footer-link">Playground</a>
+                    <a href="packages/index.html" class="footer-link">Packages</a>
+                </div>
+                <div>
+                    <h4 class="footer-title">Project</h4>
+                    <a href="about/index.html" class="footer-link">About</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="footer-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
