@@ -41,8 +41,5 @@ let reply = await ai.chat("Explain quantum physics")
 - **v1.0**: Native Runtime, Desktop Platform, Package Manager
 - **v2.0**: Advanced AI Workflows, Hardware Integration
 
-## Community
-Join us on [Discord](https://discord.gg/erikraft) or follow us on [Twitter](https://twitter.com/erikraft).
-
 ## License
 ErikrafT is licensed under the MIT License.
