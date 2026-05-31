@@ -3,12 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ErikrafT is a high-performance programming language designed for the AI era, featuring first-class AI primitives and native performance.">
     <title>Language Basics | ErikrafT Docs</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <header class="header"><div class="container"><nav class="header-nav"><div class="header-left"><a href="../index.html" class="logo">ErikrafT Language (.erik)</a><a href="index.html" class="nav-link active">Docs</a></div></nav></div></header>
+
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav" aria-label="Main navigation">
+                <div class="header-left">
+                    <a href="../index.html" class="logo">ErikrafT Language (.erik)</a>
+                    <div class="nav-links">
+                        <a href="../docs/index.html" class="nav-link active">Docs</a>
+                        <a href="../playground/index.html" class="nav-link ">Playground</a>
+                        <a href="../examples/index.html" class="nav-link ">Examples</a>
+                        <a href="../packages/index.html" class="nav-link ">Packages</a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar" id="search-trigger" aria-label="Search documentation">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search docs...</span>
+                        <span style="margin-left: auto; opacity: 0.5;">⌘K</span>
+                    </div>
+                    <a href="../download/index.html" class="btn btn-secondary">Download</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="btn btn-ghost" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <button type="button" class="mobile-menu-toggle" id="mobile-menu-open" aria-label="Open mobile menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+                <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-8);">
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: var(--space-1) var(--space-2); font-size: 0.75rem; color: var(--text-muted);">
+                        v0.1.0-alpha
+                    </div>
+                </div>
+
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <span class="logo">ErikrafT</span>
+            <button type="button" class="mobile-nav-close" id="mobile-menu-close" aria-label="Close mobile menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="../index.html" class="mobile-nav-link">Home</a>
+            <a href="../docs/index.html" class="mobile-nav-link">Docs</a>
+            <a href="../playground/index.html" class="mobile-nav-link">Playground</a>
+            <a href="../examples/index.html" class="mobile-nav-link">Examples</a>
+            <a href="../packages/index.html" class="mobile-nav-link">Packages</a>
+            <a href="../download/index.html" class="mobile-nav-link">Download</a>
+            <a href="https://github.com/erikraft/ErikrafT-Language" class="mobile-nav-link" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
     <div class="container"><div class="docs-layout">
         <aside class="docs-sidebar">
             <div class="docs-nav-group">
@@ -19,6 +75,12 @@
             </div>
         </aside>
         <main class="docs-content">
+                <nav class="breadcrumb">
+                    <a href="index.html">Docs</a>
+                    <span>/</span>
+                    <span>Language Basics</span>
+                </nav>
+
             <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">Language Basics</h1>
 
             <h2>Variables</h2>
@@ -48,7 +110,67 @@
                 <li><strong>Collections</strong>: List&lt;T&gt;, Map&lt;K, V&gt;</li>
                 <li><strong>Null Safety</strong>: Use <code>?</code> for nullable types (e.g., <code>string?</code>).</li>
             </ul>
-        </main>
+
+                <div class="docs-pagination">
+
+                    <a href="installation.html" class="pagination-link">
+                        <span class="pagination-label">← Previous</span>
+                        <span class="pagination-title">Installation</span>
+                    </a>
+
+
+                    <a href="web.html" class="pagination-link" style="text-align: right; margin-left: auto;">
+                        <span class="pagination-label">Next →</span>
+                        <span class="pagination-title">Web</span>
+                    </a>
+
+                </div>
+    </main>
     </div></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom: var(--space-4);">
+                        ErikrafT Language
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: var(--space-4);">
+                        The programming language designed for the era of AI, Web, and Native performance.
+                    </p>
+                    <div style="font-size: 0.875rem; color: var(--text-muted);">
+                        <div><strong>Website:</strong> <a href="https://lang.erikraft.com" style="color: var(--primary);">lang.erikraft.com</a></div>
+                        <div><strong>GitHub:</strong> <a href="https://github.com/erikraft/ErikrafT-Language" style="color: var(--primary);">ErikrafT-Language</a></div>
+                        <div><strong>Extension:</strong> .erik</div>
+                        <div><strong>Command:</strong> erik</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Resources</h4>
+                    <a href="../docs/index.html" class="footer-link">Documentation</a>
+                    <a href="../examples/index.html" class="footer-link">Examples</a>
+                    <a href="../playground/index.html" class="footer-link">Playground</a>
+                    <a href="../packages/index.html" class="footer-link">Packages</a>
+                </div>
+                <div>
+                    <h4 class="footer-title">Ecosystem</h4>
+                    <a href="../community/index.html" class="footer-link">Community</a>
+                    <a href="../blog/index.html" class="footer-link">Blog</a>
+                    <a href="../roadmap/index.html" class="footer-link">Roadmap</a>
+                    <a href="../changelog/index.html" class="footer-link">Changelog</a>
+                </div>
+                <div>
+                    <h4 class="footer-title">Project</h4>
+                    <a href="../about/index.html" class="footer-link">About</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="footer-link">GitHub</a>
+                    <a href="https://twitter.com/erikraft" class="footer-link">Twitter</a>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-12); border-top: 1px solid var(--border); padding-top: var(--space-8); color: var(--text-muted); font-size: 0.75rem; text-align: center;">
+                © 2024 ErikrafT Foundation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ErikrafT is a high-performance programming language designed for the AI era, featuring first-class AI primitives and native performance.">
     <title>ErikrafT | The AI-Era Programming Language</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,27 +12,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+
     <header class="header">
         <div class="container">
-            <nav class="header-nav">
+            <nav class="header-nav" aria-label="Main navigation">
                 <div class="header-left">
                     <a href="index.html" class="logo">ErikrafT Language (.erik)</a>
-                    <a href="docs/index.html" class="nav-link">Docs</a>
-                    <a href="playground/index.html" class="nav-link">Playground</a>
-                    <a href="examples/index.html" class="nav-link">Examples</a>
-                    <a href="packages/index.html" class="nav-link">Packages</a>
+                    <div class="nav-links">
+                        <a href="docs/index.html" class="nav-link ">Docs</a>
+                        <a href="playground/index.html" class="nav-link ">Playground</a>
+                        <a href="examples/index.html" class="nav-link ">Examples</a>
+                        <a href="packages/index.html" class="nav-link ">Packages</a>
+                    </div>
                 </div>
                 <div class="header-right">
-                    <div class="search-bar">
+                    <div class="search-bar" id="search-trigger" aria-label="Search documentation">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search docs...</span>
                         <span style="margin-left: auto; opacity: 0.5;">⌘K</span>
                     </div>
                     <a href="download/index.html" class="btn btn-secondary">Download</a>
-                    <a href="https://github.com/erikraft/ErikrafT-Language" class="btn btn-ghost">GitHub</a>
+                    <a href="https://github.com/erikraft/ErikrafT-Language" class="btn btn-ghost" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <button type="button" class="mobile-menu-toggle" id="mobile-menu-open" aria-label="Open mobile menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
             </nav>
         </div>
     </header>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <span class="logo">ErikrafT</span>
+            <button type="button" class="mobile-nav-close" id="mobile-menu-close" aria-label="Close mobile menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="docs/index.html" class="mobile-nav-link">Docs</a>
+            <a href="playground/index.html" class="mobile-nav-link">Playground</a>
+            <a href="examples/index.html" class="mobile-nav-link">Examples</a>
+            <a href="packages/index.html" class="mobile-nav-link">Packages</a>
+            <a href="download/index.html" class="mobile-nav-link">Download</a>
+            <a href="https://github.com/erikraft/ErikrafT-Language" class="mobile-nav-link" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
 
     <main>
         <section class="hero">
@@ -47,6 +77,11 @@
 
                 <div class="editor-container">
                     <div class="editor-header">
+                        <div class="editor-controls">
+                            <div class="control control-close"></div>
+                            <div class="control control-minimize"></div>
+                            <div class="control control-maximize"></div>
+                        </div>
                         <div class="editor-tabs">
                             <div class="editor-tab active">
                                 <span style="opacity: 0.5;"><i class="fa-regular fa-file"></i></span> main.erik
@@ -112,6 +147,7 @@
         </section>
     </main>
 
+
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -150,11 +186,12 @@
                     <a href="https://twitter.com/erikraft" class="footer-link">Twitter</a>
                 </div>
             </div>
-            <div style="margin-top: var(--space-12); color: var(--text-muted); font-size: 0.75rem; text-align: center;">
+            <div style="margin-top: var(--space-12); border-top: 1px solid var(--border); padding-top: var(--space-8); color: var(--text-muted); font-size: 0.75rem; text-align: center;">
                 © 2024 ErikrafT Foundation. All rights reserved.
             </div>
         </div>
     </footer>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
