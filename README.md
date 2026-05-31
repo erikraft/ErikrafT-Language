@@ -4,6 +4,8 @@
 
 **ErikrafT** is a modern, high-performance programming language designed for AI, Web, and Native applications.
 
+**Status: Development Preview (Pre-Alpha)**
+
 ## Key Features
 - **Modern Syntax**: Elegant and familiar syntax inspired by TypeScript and Rust.
 - **Type Safety**: Null-safe by default with a powerful static type system.
@@ -12,14 +14,18 @@
 - **High Performance**: Compiled to native code, JavaScript, or WebAssembly.
 
 ## Quick Start
-```bash
-# Install erik
-curl -sSL https://erikraft.com/install.sh | sh
 
-# Create a new app
-erik new my-app
-cd my-app
-erik run main.erik
+The ErikrafT compiler and runtime are currently under development. Binary releases are not available yet.
+
+To run the current prototype:
+
+```bash
+# Clone the repository
+git clone https://github.com/erikraft/ErikrafT-Language
+cd ErikrafT-Language
+
+# Run an example using the prototype CLI
+python3 cli/erik.py run examples/hello.erik
 ```
 
 ## Examples
